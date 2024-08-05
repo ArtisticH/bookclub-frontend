@@ -1,0 +1,84 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --height: 70px;
+  --distance: 1700%;
+  --final-width: 280px;
+  --font-Merriweather: "Merriweather", serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-korean: "Noto Sans KR", sans-serif;
+  --font-vt323: "VT323", monospace;
+  --font-myeongjo: "Nanum Myeongjo", serif;
+  --font-brush: "Nanum Brush Script", cursive;
+  --font-hahmlet: "Hahmlet", serif;
+  --font-dokdo: "East Sea Dokdo", sans-serif;
+  --font-diphylleia :"Diphylleia", serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.img {
+  display: block;
+  width: 100%;
+}
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-korean);
+  font-size: 1.5rem;
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.searching_txt {
+  color: #dd2a4d;
+  font-weight: 500;
+}
+
+@media all and (min-width: 1200px) { 
+  :root {
+    --final-width: 330px;
+  }
+}
+
+
