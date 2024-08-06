@@ -34,7 +34,7 @@ const Add = ({ data, dispatch, ContainerDispatch }) => {
     const res = await axios.post(`${process.env.REACT_APP_WAITLIST_API_URL}/list/preview`, formData, {withCredentials: true});
     const { url } = res.data;
     setVisible(true);
-    PreviewImg.current.src = `${process.env.REACT_APP_WAITLIST_API_URL}/${url}`;
+    PreviewImg.current.src = `${process.env.REACT_APP_WAITLIST_API_URL}${url}`;
     Url.current.value = url;
     setClicked(false);
   }, []);
