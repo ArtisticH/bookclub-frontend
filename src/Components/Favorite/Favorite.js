@@ -134,7 +134,7 @@ const Favorite = ({ categories, loading }) => {
           <div className={cx("favorite")}>
             <img
               className={cx("background")}
-              src={`${REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
               alt="background"
             />
             <div className={cx("title")}>Favorite</div>
