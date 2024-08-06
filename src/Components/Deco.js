@@ -85,7 +85,6 @@ const Options = ({ dispatch, state }) => {
     formData.append("image", file);
     const res = await axios.post(`${process.env.REACT_APP_WAITLIST_API_URL}/deco/preview`, formData, {withCredentials: true});
     const { url } = res.data;
-    console.log(url)
     dispatch({ type: "IMG", url });
   }, []);
 
@@ -209,7 +208,6 @@ const Canvas = ({ dispatch, state }) => {
   const draw = useCallback(
     (e) => {
       if (!canvas.painting) return;
-      console.log("드로우");
       const rect = canvas.elem.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
