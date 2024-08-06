@@ -14,7 +14,7 @@ const Category = ({ category, showModal, whichCategory }) => {
   return (
     <div className={cx("category", category.modelName)} onClick={Click}>
       <div className={cx("category-img-box")}>
-        <img className={cx("category-img")} src={category.img} alt="category" />
+        <img className={cx("category-img")} src={`${REACT_APP_WAITLIST_API_URL}/${category.img}`} alt="category" />
       </div>
       <div className={cx("info")}>
         <div className={cx("info-top")}>
@@ -30,7 +30,7 @@ const Category = ({ category, showModal, whichCategory }) => {
             <div>
               <img
                 className={cx("music-img")}
-                src="/img/icon/music.png"
+                src={`${REACT_APP_WAITLIST_API_URL}/img/icon/music.png`}
                 alt="music"
               />
             </div>
@@ -134,7 +134,7 @@ const Favorite = ({ categories, loading }) => {
           <div className={cx("favorite")}>
             <img
               className={cx("background")}
-              src="/img/favorite/background.jpeg"
+              src={`${REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
               alt="background"
             />
             <div className={cx("title")}>Favorite</div>

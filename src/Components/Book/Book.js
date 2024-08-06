@@ -34,7 +34,7 @@ const LeftNav = ({ data }) => {
         <>
           <div className={cx("links")}>
             <Link to="/books" style={{ width: "70px" }}>
-              <img className="img" src="/img/icon/left-white-arrow.png" />
+              <img className="img" src={`${REACT_APP_WAITLIST_API_URL}/img/icon/left-white-arrow.png`} />
             </Link>
             <Link to="/" className={cx("home")}>
               HOME
@@ -60,7 +60,7 @@ const LeftBook = ({ data }) => {
         <div className={cx("left-main")}>
           <div className={cx("left-grid")}>
             <div className={cx("book-img")}>
-              <img className="img" src={book.img} alt="book-img" />
+              <img className="img" src={`${REACT_APP_WAITLIST_API_URL}/${book.img}`} alt="book-img" />
             </div>
             <div className={cx("book-info")}>
               <div className={cx("book-title")}>{book.title}</div>
@@ -321,7 +321,7 @@ const Review = ({
             <img
               ref={Arrow}
               className={cx("more-arrow")}
-              src="/img/icon/down-arrow.png"
+              src={`${REACT_APP_WAITLIST_API_URL}/img/icon/down-arrow.png`}
               alt="arrow"
             />
           </div>
@@ -332,12 +332,12 @@ const Review = ({
             <img
               ref={Heart}
               className={cx("heart-img", { back })}
-              src="/img/icon/heart.png"
+              src={`${REACT_APP_WAITLIST_API_URL}/img/icon/heart.png`}
               alt="heart"
             />
             <img
               className={cx("heart-img")}
-              src="/img/icon/heart.png"
+              src={`${REACT_APP_WAITLIST_API_URL}/img/icon/heart.png`}
               alt="heart"
             />
           </div>
@@ -593,7 +593,7 @@ const Form = ({
       </div>
       <div className={cx("form-book")}>
         <div>
-          <img className={cx("img")} src={book.img} alt="book" />
+          <img className={cx("img")} src={`${REACT_APP_WAITLIST_API_URL}/${book.img}`} alt="book" />
         </div>
         <div className={cx("form-info")}>
           <div className={cx("form-book-title")}>{book.title}</div>

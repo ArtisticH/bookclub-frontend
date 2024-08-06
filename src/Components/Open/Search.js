@@ -186,10 +186,10 @@ const ResultZone = ({ state, dispatch, user }) => {
             />
           ))}
       </div>
-      <img src="/img/open/line.png" alt="img" className={cx("line-top")} />
-      <img src="/img/open/line.png" alt="img" className={cx("line-bottom")} />
-      <img src="/img/open/line.png" alt="img" className={cx("line-left")} />
-      <img src="/img/open/line.png" alt="img" className={cx("line-right")} />
+      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/line.png`} alt="img" className={cx("line-top")} />
+      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/line.png`} alt="img" className={cx("line-bottom")} />
+      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/line.png`} alt="img" className={cx("line-left")} />
+      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/line.png`} alt="img" className={cx("line-right")} />
     </div>
   );
 };
@@ -279,7 +279,7 @@ const SearchZone = ({ dispatch }) => {
         <div className={cx("select-zone")}>
           <img
             className={cx("select-img")}
-            src="/img/open/search-select.png"
+            src={`${REACT_APP_WAITLIST_API_URL}/img/open/search-select.png`}
             alt="img"
           />
           <select
@@ -297,7 +297,7 @@ const SearchZone = ({ dispatch }) => {
         <div className={cx("input-zone")}>
           <img
             className={cx("input-img")}
-            src="/img/open/search-input.png"
+            src={`${REACT_APP_WAITLIST_API_URL}/img/open/search-input.png`}
             alt="img"
           />
           <input
@@ -311,7 +311,7 @@ const SearchZone = ({ dispatch }) => {
         <div className={cx("search-btn")}>
           <img
             className={cx("search-img")}
-            src="/img/open/glasses.png"
+            src={`${REACT_APP_WAITLIST_API_URL}/img/open/glasses.png`}
             alt="img"
           />
           <input

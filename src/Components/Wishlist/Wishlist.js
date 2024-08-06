@@ -204,7 +204,7 @@ const Folder = ({ state, data, folder, dispatch }) => {
       onDoubleClick={Open}
     >
       <div className={cx("img-box")}>
-        <img className="img" src="/img/icon/folder.png" alt="folder" />
+        <img className="img" src={`${REACT_APP_WAITLIST_API_URL}/img/icon/folder.png`} alt="folder" />
         <div className={cx("count", { private: !folder.public })}>
           {folder.count}
         </div>
@@ -242,7 +242,7 @@ const Done = ({ state, data, dispatch }) => {
       onDoubleClick={Open}
     >
       <div className={cx("img-box")}>
-        <img className="img" src="/img/icon/folder.png" alt="folder" />
+        <img className="img" src={`${REACT_APP_WAITLIST_API_URL}/img/icon/folder.png`} alt="folder" />
         <div className={cx("count", { private: !done.public })}>
           {done.count}
         </div>
@@ -478,7 +478,7 @@ const BlankMenu = ({ data, state, dispatch, ContainerDispatch }) => {
         <div>다음으로 정렬</div>
         <img
           className={cx("arrow")}
-          src="/img/icon/right-white-arrow.png"
+          src={`${REACT_APP_WAITLIST_API_URL}/img/icon/right-white-arrow.png`}
           alt="arrow"
         />
         <div className={cx("sort-menu", { visible })}>

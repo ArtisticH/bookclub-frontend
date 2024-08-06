@@ -43,7 +43,7 @@ const Final = ({ id, state }) => {
             ref={This}
             onClick={Download}
             className={cx("img")}
-            src={`/img/${model}/${original[choosen].main}.jpeg`}
+            src={`${REACT_APP_WAITLIST_API_URL}/img/${model}/${original[choosen].main}.jpeg`}
             alt="final"
           />
         </div>
@@ -66,7 +66,7 @@ const Icon = ({ types }) => {
       {types === "music" ? (
         <>
           <div className={cx("icon-img-box")}>
-            <img className={cx("img")} src="/img/icon/music.png" alt="music" />
+            <img className={cx("img")} src={`${REACT_APP_WAITLIST_API_URL}/img/icon/music.png`} alt="music" />
           </div>
           <div className={cx("icon-text")}>
             Click Play & Pause Icon!
@@ -133,7 +133,7 @@ const TopImg = ({ state, dispatch }) => {
       >
         <img
           className={cx("img")}
-          src={`/img/${model}/${main[index]}.jpeg`}
+          src={`${REACT_APP_WAITLIST_API_URL}/img/${model}/${main[index]}.jpeg`}
           alt="img"
         />
       </div>
@@ -179,14 +179,14 @@ const TopInfo = ({ state, dispatch }) => {
         <>
           <audio
             className={cx("audio")}
-            src={`/audio/${model}/${main[index]}.mp3`}
+            src={`${REACT_APP_WAITLIST_API_URL}/audio/${model}/${main[index]}.mp3`}
             ref={Audio}
             onEnded={ended}
           ></audio>
           <div className={cx("play")} onClick={top ? Pause : Play}>
             <img
               className={cx("img")}
-              src={top ? "/img/icon/pause.png" : "/img/icon/play.png"}
+              src={top ? `${REACT_APP_WAITLIST_API_URL}/img/icon/pause.png` : `${REACT_APP_WAITLIST_API_URL}/img/icon/play.png`}
               alt="play"
             />
           </div>
@@ -224,7 +224,7 @@ const BotImg = ({ state, dispatch }) => {
       >
         <img
           className={cx("img")}
-          src={`/img/${model}/${main[index + 1]}.jpeg`}
+          src={`${REACT_APP_WAITLIST_API_URL}/img/${model}/${main[index + 1]}.jpeg`}
           alt="img"
         />
       </div>
@@ -270,14 +270,14 @@ const BotInfo = ({ state, dispatch }) => {
         <>
           <audio
             className={cx("audio")}
-            src={`/audio/${model}/${main[index + 1]}.mp3`}
+            src={`${REACT_APP_WAITLIST_API_URL}/audio/${model}/${main[index + 1]}.mp3`}
             ref={Audio}
             onEnded={ended}
           ></audio>
           <div className={cx("play")} onClick={bottom ? Pause : Play}>
             <img
               className={cx("img")}
-              src={bottom ? "/img/icon/pause.png" : "/img/icon/play.png"}
+              src={bottom ? `${REACT_APP_WAITLIST_API_URL}/img/icon/pause.png` : `${REACT_APP_WAITLIST_API_URL}/img/icon/play.png`}
               alt="play"
             />
           </div>
@@ -344,7 +344,7 @@ const Tournament = ({ category, loading, id, round }) => {
           <div className={cx("tournament")}>
             <img
               className={cx("background")}
-              src="/img/favorite/background.jpeg"
+              src={`${REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
               alt="background"
             />
             <div className={cx("title")}>{state.info.title}</div>

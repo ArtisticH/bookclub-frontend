@@ -34,7 +34,7 @@ const Add = ({ data, dispatch, ContainerDispatch }) => {
     const res = await axios.post(`${process.env.REACT_APP_WAITLIST_API_URL}/list/preview`, formData, {withCredentials: true});
     const { url } = res.data;
     setVisible(true);
-    PreviewImg.current.src = url;
+    PreviewImg.current.src = `${REACT_APP_WAITLIST_API_URL}/${url}`;
     Url.current.value = url;
     setClicked(false);
   }, []);
@@ -47,8 +47,8 @@ const Add = ({ data, dispatch, ContainerDispatch }) => {
       setClicked(false);
     } else {
       setVisible(true);
-      PreviewImg.current.src = "/img/icon/default-list.jpeg";
-      Url.current.value = "/img/icon/default-list.jpeg";
+      PreviewImg.current.src = `${REACT_APP_WAITLIST_API_URL}/img/icon/default-list.jpeg`;
+      Url.current.value = `/img/icon/default-list.jpeg`;
       setClicked(true);
     }
   }, [clicked]);
@@ -243,7 +243,7 @@ const Nav = ({ data, state, dispatch, ContainerDispatch }) => {
             <Link to={`/wishlist/${member.id}`} className={cx("back")}>
               <img
                 className="img"
-                src="/img/icon/left-black-arrow.png"
+                src={`${REACT_APP_WAITLIST_API_URL}/img/icon/left-black-arrow.png`}
                 alt="arrow"
               />
             </Link>
@@ -402,7 +402,7 @@ const Book = ({ state, list, dispatch }) => {
   return (
     <div className={cx("list-box")} onClick={Select}>
       <div className={cx("img-box", { clicked: selected.includes(list.id) })}>
-        <img className="img" src={list.img} alt="" />
+        <img className="img" src={`${list.img}`} alt="" />
       </div>
       <div className={cx("list-title")} dangerouslySetInnerHTML={{ __html: list.title }}></div>
       <div className={cx("list-author")} dangerouslySetInnerHTML={{ __html: list.author }}></div>
