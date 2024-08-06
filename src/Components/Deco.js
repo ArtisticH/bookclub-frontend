@@ -60,7 +60,7 @@ const Preview = ({ state, dispatch }) => {
 
   return (
     <div className={cx("preview")} ref={PreviewElem}>
-      <img className={cx("preview-img", { none: img === "" })} src={`${process.env.REACT_APP_WAITLIST_API_URL}/${img}`} />
+      <img className={cx("preview-img", { none: img === "" })} src={`${process.env.REACT_APP_WAITLIST_API_URL}${img}`} />
       <canvas
         className={cx("canvas")}
         width={canvas.width}
