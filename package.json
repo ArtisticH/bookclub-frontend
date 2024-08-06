@@ -53,5 +53,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://port-0-bookclub-backend-lzgqjytn6cca1780.sel4.cloudtype.app/api/guests"
+  "proxy": "http://port-0-bookclub-backend-lzgqjytn6cca1780.sel4.cloudtype.app"
 }
