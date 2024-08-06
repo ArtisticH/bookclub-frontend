@@ -85,6 +85,7 @@ const Options = ({ dispatch, state }) => {
     formData.append("image", file);
     const res = await axios.post(`${process.env.REACT_APP_WAITLIST_API_URL}/deco/preview`, formData, {withCredentials: true});
     const { url } = res.data;
+    console.log(url)
     dispatch({ type: "IMG", url });
   }, []);
 
