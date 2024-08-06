@@ -264,7 +264,7 @@ const TopRight = ({ index, dispatch }) => {
           <div className={cx("arrow")} onClick={ClickWishlist}>
             <img
               className="img"
-              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/right-black-arrow.png`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/public/img/icon/right-black-arrow.png`}
               alt="arrow"
             />
           </div>
@@ -272,7 +272,7 @@ const TopRight = ({ index, dispatch }) => {
           <Link to={`/${title[index].toLowerCase()}`} className={cx("arrow")}>
             <img
               className="img"
-              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/right-black-arrow.png`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/public/img/icon/right-black-arrow.png`}
               alt="arrow"
             />
           </Link>
