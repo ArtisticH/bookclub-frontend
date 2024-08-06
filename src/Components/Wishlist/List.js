@@ -390,6 +390,14 @@ const Empty = () => {
   return <div className={cx("empty")}>리스트를 추가해주세요.</div>;
 };
 
+const ImgPath = useCallback((input) => {
+  if (input.includes('http://') || input.includes('https://')) {
+    return `${input}`;
+  } else {
+    return `${process.env.REACT_APP_WAITLIST_API_URL}${input}`
+  }
+}, []);
+
 const Book = ({ state, list, dispatch }) => {
   const { selected } = state;
   const Select = useCallback(() => {
@@ -402,7 +410,7 @@ const Book = ({ state, list, dispatch }) => {
   return (
     <div className={cx("list-box")} onClick={Select}>
       <div className={cx("img-box", { clicked: selected.includes(list.id) })}>
-        <img className="img" src={`${list.img}`} alt="" />
+        <img className="img" src={ImgPath(list.img)} alt="" />
       </div>
       <div className={cx("list-title")} dangerouslySetInnerHTML={{ __html: list.title }}></div>
       <div className={cx("list-author")} dangerouslySetInnerHTML={{ __html: list.author }}></div>
