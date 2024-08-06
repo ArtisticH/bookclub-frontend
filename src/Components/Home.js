@@ -136,6 +136,10 @@ const LogInForm = ({ formLogin, dispatch, LogIn, members }) => {
 };
 
 const SignUpForm = ({ formSignup, dispatch }) => {
+  const Password = useRef(null);
+  const Email = useRef(null);
+  const Nickname = useRef(null);
+
   const CancelSignUp = useCallback(() => {
     dispatch({ type: "FORM_CANCEL_SIGNUP" });
   }, []);
@@ -151,6 +155,9 @@ const SignUpForm = ({ formSignup, dispatch }) => {
         password,
       }, {withCredentials: true});
       CancelSignUp();
+      Password.current.value = '';
+      Email.current.value = '';
+      Nickname.current.value = '';
       const success = res.data.success;
       if (success) {
         alert("회원가입 완료! 로그인을 진행해주세요.");
@@ -175,18 +182,21 @@ const SignUpForm = ({ formSignup, dispatch }) => {
         <div className={cx("form-title")}>SIGN UP</div>
         <form onSubmit={Submit}>
           <input
+            ref={Email}
             className={cx("input", "common")}
             type="email"
             name="email"
             placeholder="e-mail*"
           />
           <input
+            ref={Nickname}
             className={cx("input", "common")}
             type="text"
             name="nick"
             placeholder="nickname*"
           />
           <input
+            ref={Password}
             className={cx("input", "common")}
             type="password"
             name="password"
