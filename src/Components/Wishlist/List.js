@@ -390,16 +390,16 @@ const Empty = () => {
   return <div className={cx("empty")}>리스트를 추가해주세요.</div>;
 };
 
-const ImgPath = useCallback((input) => {
-  if (input.includes('http://') || input.includes('https://')) {
-    return `${input}`;
-  } else {
-    return `${process.env.REACT_APP_WAITLIST_API_URL}${input}`
-  }
-}, []);
 
 const Book = ({ state, list, dispatch }) => {
   const { selected } = state;
+  const ImgPath = useCallback((input) => {
+    if (input.includes('http://') || input.includes('https://')) {
+      return `${input}`;
+    } else {
+      return `${process.env.REACT_APP_WAITLIST_API_URL}${input}`
+    }
+  }, []);  
   const Select = useCallback(() => {
     if (selected.includes(list.id)) {
       dispatch({ type: "REMOVE_SELECT", id: list.id });
