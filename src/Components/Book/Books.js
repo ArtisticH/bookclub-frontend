@@ -15,7 +15,7 @@ const Left = ({ length }) => {
       <Link to="/" className={cx("arrow")}>
         <img
           className="img"
-          src={`${REACT_APP_WAITLIST_API_URL}/img/icon/left-white-arrow.png`}
+          src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/left-white-arrow.png`}
           alt="arrow"
         />
       </Link>

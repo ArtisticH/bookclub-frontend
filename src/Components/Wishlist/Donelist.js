@@ -24,7 +24,7 @@ const Nav = ({ data, state, dispatch, ContainerDispatch }) => {
             <Link to={`/wishlist/${member.id}`} className={cx("back")}>
               <img
                 className="img"
-                src={`${REACT_APP_WAITLIST_API_URL}/img/icon/left-black-arrow.png`}
+                src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/left-black-arrow.png`}
                 alt="arrow"
               />
             </Link>

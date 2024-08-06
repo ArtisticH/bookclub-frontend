@@ -11,7 +11,7 @@ const List = ({ list, index }) => {
       <div className={cx("img-box")}>
         <img
           className={cx("img")}
-          src={`${REACT_APP_WAITLIST_API_URL}/img/${list.modelName}/${list.main}.jpeg`}
+          src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/${list.modelName}/${list.main}.jpeg`}
           alt="img"
         />
       </div>
@@ -61,7 +61,7 @@ const Ranking = ({ loading, result }) => {
           <div className={cx("ranking")}>
             <img
               className={cx("background")}
-              src={`${REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/favorite/background.jpeg`}
               alt="background"
             />
             <div className={cx("nav")}>

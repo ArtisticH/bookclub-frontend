@@ -312,7 +312,7 @@ const Lists = ({ data, paramsType, loading, ContainerDispatch }) => {
       {!loading && data && (
         <>
           <div>
-            <img src={`${REACT_APP_WAITLIST_API_URL}/${data.img}`} alt="img" className={cx("deco-img")} />
+            <img src={`${process.env.REACT_APP_WAITLIST_API_URL}/${data.img}`} alt="img" className={cx("deco-img")} />
             <div className={cx("nav")}>
               <Link to="/open">BACK</Link>
               <Link to="/">HOME</Link>

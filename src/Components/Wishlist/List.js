@@ -34,7 +34,7 @@ const Add = ({ data, dispatch, ContainerDispatch }) => {
     const res = await axios.post(`${process.env.REACT_APP_WAITLIST_API_URL}/list/preview`, formData, {withCredentials: true});
     const { url } = res.data;
     setVisible(true);
-    PreviewImg.current.src = `${REACT_APP_WAITLIST_API_URL}/${url}`;
+    PreviewImg.current.src = `${process.env.REACT_APP_WAITLIST_API_URL}/${url}`;
     Url.current.value = url;
     setClicked(false);
   }, []);
@@ -47,7 +47,7 @@ const Add = ({ data, dispatch, ContainerDispatch }) => {
       setClicked(false);
     } else {
       setVisible(true);
-      PreviewImg.current.src = `${REACT_APP_WAITLIST_API_URL}/img/icon/default-list.jpeg`;
+      PreviewImg.current.src = `${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/default-list.jpeg`;
       Url.current.value = `/img/icon/default-list.jpeg`;
       setClicked(true);
     }
@@ -243,7 +243,7 @@ const Nav = ({ data, state, dispatch, ContainerDispatch }) => {
             <Link to={`/wishlist/${member.id}`} className={cx("back")}>
               <img
                 className="img"
-                src={`${REACT_APP_WAITLIST_API_URL}/img/icon/left-black-arrow.png`}
+                src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/icon/left-black-arrow.png`}
                 alt="arrow"
               />
             </Link>

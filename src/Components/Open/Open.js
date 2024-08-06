@@ -8,8 +8,8 @@ const cx = classNames.bind(styles);
 const Open = () => {
   return (
     <div className={cx("open")}>
-      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/open-text.png`} className={cx("text-img")} />
-      <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/open-deco.png`} className={cx("deco-img")} />
+      <img src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/open-text.png`} className={cx("text-img")} />
+      <img src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/open-deco.png`} className={cx("deco-img")} />
       <Link to="/" className={cx("home", "nav")}>
         BOOKCLUB
       </Link>
@@ -25,7 +25,7 @@ const Open = () => {
           </div>
           <div className={cx("img-box")}>
             <img
-              src={`${REACT_APP_WAITLIST_API_URL}/img/open/national-list.png`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/national-list.png`}
               alt="national-list"
               className="img"
             />
@@ -35,7 +35,7 @@ const Open = () => {
           <div className={cx("box-title")}>국립중앙도서관 소장자료조회</div>
           <div className={cx("img-box")}>
             <img
-              src={`${REACT_APP_WAITLIST_API_URL}/img/open/national-search.png`}
+              src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/national-search.png`}
               alt="national-search"
               className="img"
             />
@@ -44,7 +44,7 @@ const Open = () => {
         <Link to="/open/faker" className={cx("box")}>
           <div className={cx("box-title")}>페이커 독서목록</div>
           <div className={cx("img-box")}>
-            <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/faker.png`} alt="faker" className="img" />
+            <img src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/faker.png`} alt="faker" className="img" />
           </div>
         </Link>
         <Link to="/open/aladin" className={cx("box")}>
@@ -54,7 +54,7 @@ const Open = () => {
             소설/시/희곡
           </div>
           <div className={cx("img-box")}>
-            <img src={`${REACT_APP_WAITLIST_API_URL}/img/open/aladin.png`} alt="aladin" className="img" />
+            <img src={`${process.env.REACT_APP_WAITLIST_API_URL}/img/open/aladin.png`} alt="aladin" className="img" />
           </div>
         </Link>
       </div>
