@@ -521,7 +521,7 @@ const Wishlist = ({ data, loading, ContainerDispatch }) => {
   return (
     <>
       {loading && <div className="loading">로딩중...</div>}
-      {!loading && data && done && (
+      {!loading && data && (
         <>
           <div className={cx("wishlist")}>
             <div className={cx("nav")}>

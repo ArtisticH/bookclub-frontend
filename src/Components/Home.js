@@ -62,10 +62,10 @@ const LogInForm = ({ formLogin, dispatch, LogIn, members }) => {
     dispatch({ type: "FORM_CANCEL_LOGIN" });
   }, []);
   const Kakao = useCallback(() => {
-    window.location.href = 'http://localhost:3001/auth/kakao'; 
+    window.location.href = `${process.env.REACT_APP_WAITLIST_API_URL}/auth/kakao`;
   }, [])
   const Naver = useCallback(() => {
-    window.location.href = 'http://localhost:3001/auth/naver'; 
+    window.location.href = `${process.env.REACT_APP_WAITLIST_API_URL}/auth/naver`; 
   }, [])
 
   // 로그인을 진행할때
